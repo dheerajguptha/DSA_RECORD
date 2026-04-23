@@ -1,7 +1,7 @@
 //Implementation of Fractional Knapsack using Greedy Method 
 
 /*
-  AIM : To write a program to implement the Fractional Knapsack       problem using the Greedy method to maximize profit.
+  AIM : To write a program to implement the Fractional Knapsack problem using the Greedy method to maximize profit.
 */
 
 //Program
