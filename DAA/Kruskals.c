@@ -3,7 +3,7 @@
 //Kruskal’s Algorithm
 
 /*
-   AIM : To write a program to implement Kruskal’s Algorithm to      find the minimum spanning tree of a given graph.
+   AIM : To write a program to implement Kruskal’s Algorithm to find the minimum spanning tree of a given graph.
 */
 
 //Program
