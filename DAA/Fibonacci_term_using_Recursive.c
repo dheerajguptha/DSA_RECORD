@@ -1,7 +1,7 @@
 // Fibonacci term using Recursion
 
 /*
-AIM : To write a program to find the nth Fibonacci term using   recursion
+AIM : To write a program to find the nth Fibonacci term using recursion
 */
 
 //Program
