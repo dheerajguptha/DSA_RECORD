@@ -1,60 +1,82 @@
-#include<stdio.h>
+//Implementation of Fractional Knapsack using Greedy Method 
+
+/*
+  AIM : To write a program to implement the Fractional Knapsack       problem using the Greedy method to maximize profit.
+*/
+
+//Program
+
+#include <stdio.h>
+
 struct Item
 {
     int weight;
-    int profit;
-    float ppw;
+    int value;
+    float ppw; // profit per weight ratio
 };
-void sort(struct Item items[],int n)
+
+/* Function to sort items by ratio in descending order */
+void sort(struct Item items[], int n)
 {
     struct Item temp;
-    for (int i=0;i<n-1;i++)
+    for (int i = 0; i < n - 1; i++)
     {
-        for(int j=0;j<n-i-1;j++)
+        for (int j = 0; j < n - i - 1; j++)
         {
-            if(items[j].ppw<items[j+1].ppw)
+            if (items[j].ppw < items[j + 1].ppw)
             {
                 temp = items[j];
-                items[j] = items [j+1];
-                items[j+1] = temp;
+                items[j] = items[j + 1];
+                items[j + 1] = temp;
             }
         }
     }
 }
+
 int main()
 {
-int n,capacity;
+    int n;
+    float capacity;
 
-printf("enter number of items :");
-scanf("%d",&n);
+    printf("Enter number of items: ");
+    scanf("%d", &n);
 
-printf("enter the capacity :");
-scanf("%d",&capacity);
+    if (n <= 0)
+        return 1;
 
-printf("enter weight and profit of items :");
-struct Item items[n];
- for (int i = 0 ; i < n ; i++)
- {
-  scanf("%d %d", &items[i].weight, &items[i].profit);
-items[i].ppw = (float)items[i].profit / items[i].weight;
+    struct Item items[n];
 
- }
-   sort(items,n);
- float totalprofit = 0 ;
- 
-  for(int i=0;i<n;i++)
-  {
-     if (items[i].weight <= capacity)
+    printf("Enter weight and value of each item:\n");
+    for (int i = 0; i < n; i++)
+    {
+        printf("Item %d: ", i + 1);
+        scanf("%d %d", &items[i].weight, &items[i].value);
+        items[i].ppw = (float)items[i].value / items[i].weight;
+    }
+
+    printf("Enter knapsack capacity: ");
+    scanf("%f", &capacity);
+
+    /* Sort items by value/weight ratio */
+    sort(items, n);
+
+    float totalProfit = 0.0;
+
+    for (int i = 0; i < n; i++)
+    {
+        if (capacity >= items[i].weight)
         {
+            totalProfit += items[i].value;
             capacity -= items[i].weight;
-            totalprofit += items[i].profit ;
         }
         else
         {
-           totalprofit += items[i].ppw*capacity;
+            totalProfit += items[i].ppw * capacity;
             break;
         }
-  }
-printf("total profit = %.2f", totalprofit);
-return 0;
+    }
+
+    printf("Maximum profit = %.2f\n", totalProfit);
+
+    return 0;
 }
