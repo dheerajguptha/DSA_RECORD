@@ -1,7 +1,7 @@
 //Implementation of Bin Packing (First Fit) 
 
 /*
-   AIM : To write a program to implement the Bin Packing problem      using the First Fit method
+   AIM : To write a program to implement the Bin Packing problem using the First Fit method
 */
 
 // Program
