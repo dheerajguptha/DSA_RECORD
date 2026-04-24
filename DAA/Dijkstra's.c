@@ -1,7 +1,7 @@
 // Implementation of Shortest Path Algorithm (Dijkstra's)
 
 /*
-AIM : To implement Dijkstra's Algorithm to find the shortest path from   a source vertex to all other vertices in a weighted graph
+AIM : To implement Dijkstra's Algorithm to find the shortest path from a source vertex to all other vertices in a weighted graph
 */
 
 // Program
