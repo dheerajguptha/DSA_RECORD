@@ -1,7 +1,8 @@
 // Implementation of Randomized Algorithm (Quicksort)
 
 /*
-AIM : To implement the Randomized Quicksort algorithm to efficiently     sort a given list of elements by selecting a random pivot and      applying the divide-and-conquer technique.
+AIM : To implement the Randomized Quicksort algorithm to efficiently sort a given list of elements by selecting a random pivot and  
+      applying the divide-and-conquer technique.
 */
 
 // Program
